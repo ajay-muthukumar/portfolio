@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="icon" href="https://img.pikbest.com/png-images/20241022/stealth-masked-hacker-gaming-logo-for-gamers_10991543.png!w700wp" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio BTS SIO SISR - Ajay MUTHU KUMAR</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="script.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0066CC',
+                        secondary: '#00A651',
+                        accent: '#FF6B35',
+                        dark: '#1A1A2E',
+                        light: '#F8F9FA'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<header class="sticky top-0 z-50 bg-dark/95 backdrop-blur-sm shadow-xl transition-all duration-300">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="#accueil" class="text-2xl font-bold text-white hover:text-accent transition-colors duration-300">
+            Ajay MUTHU KUMAR <span class="text-primary">SIO SISR</span>
+        </a>
+
+          <div class="hidden md:flex space-x-8 text-lg font-medium">
+            <a href="index.html#accueil" class="text-white hover:text-primary transition-colors duration-200">Accueil</a>
+            <a href="index.html#profil" class="text-white hover:text-primary transition-colors duration-200"> À propos</a>
+            <a href="engie.html" class="text-white hover:text-primary transition-colors duration-200">Entreprise</a>
+            <a href="projets.html" class="text-white hover:text-primary transition-colors duration-200">Projets</a>
+            <a href="epreuves.html" class="text-white hover:text-primary transition-colors duration-200">Épreuves</a>
+            <a href="index.html#competences" class="text-white hover:text-primary transition-colors duration-200">Compétences</a>
+            <a href="index.html#veille" class="text-white hover:text-primary transition-colors duration-200">Veille</a>
+            <a href="contact.html" class="text-accent hover:text-orange-400 transition-colors duration-200">Contact</a>
+        </div>
+
+
+
+        <button id="menu-button" class="md:hidden text-white focus:outline-none">
+            <i data-feather="menu" class="w-8 h-8"></i>
+        </button>
+    </nav>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-dark/90 text-center pb-4">
+            <a href="index.html#accueil" class="block py-2 text-white hover:bg-primary/50 transition-colors duration-200">Accueil</a>
+            <a href="index.html#profil" class="block py-2 text-white hover:bg-primary/50 transition-colors duration-200">À propos</a>
+            <a href="engie.html" class="block py-2 text-white hover:bg-primary/50 transition-colors duration-200">Entreprise</a>
+            <a href="projets.html" class="block py-2 text-white hover:bg-primary/50 transition-colors duration-200">Projets</a>
+            <a href="epreuves.html" class="block py-2 text-white hover:bg-primary/50 transition-colors duration-200">Épreuves</a>
+            <a href="index.html#competences" class="block py-2 text-white hover:bg-primary/50 transition-colors duration-200">Compétences</a>
+            <a href="index.html#veille" class="block py-2 text-white hover:bg-primary/50 transition-colors duration-200">Veille</a>
+            <a href="contact.html" class="block py-2 text-accent hover:bg-accent/50 transition-colors duration-200">Contact</a>
+        </div>
+</header>
+
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Topologie Réseau & Routage Linux - Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-color: #0B1120; /* Bleu très sombre fond */
+            --card-bg: #151E32; /* Bleu gris carte */
+            --text-main: #E2E8F0;
+            --text-muted: #94A3B8;
+            --accent-blue: #3B82F6;
+            --accent-green: #10B981;
+            --accent-orange: #F59E0B;
+            --border-color: #2D3748;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* --- Section Image Principale (Diagramme) --- */
+        .hero-section {
+            background-color: white; 
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            padding: 20px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .hero-section img {
+            max-width: 100%;
+            height: auto;
+            max-height: 400px; 
+            object-fit: contain;
+        }
+
+        /* --- En-tête du Projet --- */
+        .project-header {
+            margin-bottom: 40px;
+        }
+
+        .meta-tags {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .badge {
+            padding: 5px 12px;
+            border-radius: 6px;
+            background-color: #1E293B;
+            color: var(--accent-blue);
+        }
+
+        .badge.date {
+            color: var(--text-muted);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        /* --- Mise en page Grid (2 colonnes) --- */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr; 
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+
+        /* Contenu Gauche */
+        h2 {
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+            color: white;
+            border-bottom: 2px solid #1E293B;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .section-block {
+            margin-bottom: 40px;
+        }
+
+        p {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            text-align: justify;
+        }
+
+        /* Grille Fonctionnalités */
+        .features-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .feature-card {
+            background-color: #0F1623; 
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            border: 1px solid #1E293B;
+            transition: transform 0.2s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--accent-blue);
+        }
+
+        .feature-card i {
+            color: var(--accent-green);
+            font-size: 1.1rem;
+        }
+
+        .feature-card span {
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        /* Liste Défis Techniques */
+        .challenges-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .challenge-item {
+            background: linear-gradient(90deg, rgba(30,41,59,0.5) 0%, rgba(15,23,42,0) 100%);
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            border-left: 3px solid var(--accent-orange);
+            border: 1px solid #1E293B;
+            border-left-width: 4px;
+        }
+
+        .challenge-item i {
+            color: var(--accent-orange);
+            background: rgba(245, 158, 11, 0.1);
+            padding: 10px;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Colonne Droite (Sidebar) */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .sidebar-card {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 10px;
+        }
+
+        .tech-tag {
+            background-color: #172554; /* Bleu très foncé */
+            color: #60A5FA; /* Bleu clair texte */
+            padding: 5px 12px;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            border: 1px solid #1E3A8A;
+        }
+
+        .info-row {
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .info-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .info-value {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: white;
+        }
+
+        .status-done {
+            color: var(--accent-green);
+            background: rgba(16, 185, 129, 0.1);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+
+        .cta-btn {
+            display: block;
+            width: 100%;
+            background-color: var(--accent-blue);
+            color: white;
+            text-align: center;
+            padding: 12px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            margin-top: 15px;
+            transition: background 0.2s;
+        }
+
+        .cta-btn:hover {
+            background-color: #2563EB;
+        }
+
+        /* --- Autres Projets (Bas de page) --- */
+        .other-projects-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .project-card {
+            background-color: var(--card-bg);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            transition: transform 0.2s;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-img {
+            height: 140px;
+            background-color: #0F172A;
+            width: 100%;
+            object-fit: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #334155;
+            font-size: 2rem;
+        }
+
+        .project-content {
+            padding: 20px;
+        }
+
+        .project-title {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: white;
+        }
+
+        .project-desc {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        /* Responsive Mobile */
+        @media (max-width: 768px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            .other-projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="hero-section">
+            <img src="Topologie.png" alt="Schéma Topologie Réseau">
+        </div>
+
+        <div class="project-header">
+            <div class="meta-tags">
+                <span class="badge">Projet Académique</span>
+                <span class="badge date"><i class="far fa-calendar"></i> Nov 2024</span>
+            </div>
+            <h1>Configuration & Routage Réseau Linux</h1>
+        </div>
+
+        <div class="main-grid">
+            
+            <div class="left-col">
+                
+                <div class="section-block">
+                    <h2>Aperçu du Projet</h2>
+                    <p>
+                        Mise en place complète d'une infrastructure réseau virtuelle comprenant un routeur sous Debian et deux clients (Windows 10 et Debian Graphique). 
+                        L'objectif était de créer un réseau segmenté (LAN Windows & LAN Linux) interconnecté via un routeur central (RTR). 
+                        [cite_start][cite: 1, 2, 7, 12]
+                        Le projet a nécessité la configuration manuelle des interfaces réseaux, le déploiement d'un serveur DHCP (isc-dhcp-server) avec réservation d'adresses MAC, et la mise en place du NAT pour l'accès internet.
+                        [cite_start][cite: 497, 564, 785]
+                    </p>
+                </div>
+
+                <div class="section-block">
+                    <h2>Fonctionnalités Principales</h2>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <i class="fas fa-server"></i>
+                            <span>Serveur DHCP (isc-dhcp-server)</span>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-network-wired"></i>
+                            <span>Segmentation LAN & Routage</span>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-address-card"></i>
+                            <span>Réservation d'IP par Adresse MAC</span>
+                        </div>
+                        <div class="feature-card">
+                            <i class="fas fa-globe"></i>
+                            <span>Configuration NAT & Internet</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-block">
+                    <h2>Défis Techniques</h2>
+                    <div class="challenges-list">
+                        <div class="challenge-item">
+                            <i class="fas fa-terminal"></i>
+                            <span>Configuration manuelle des interfaces via /etc/network/interfaces et gestion des services systemd.</span>
+                        </div>
+                        <div class="challenge-item">
+                            <i class="fas fa-project-diagram"></i>
+                            <span>Mise en place de sous-réseaux distincts (172.20.47.0/24 et 172.20.57.0/24) communiquant via le routeur.</span>
+                        </div>
+                        <div class="challenge-item">
+                            <i class="fas fa-bug"></i>
+                            <span>Dépannage de la connectivité (Ping, ipconfig/release & renew) entre machines virtuelles.</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="sidebar">
+                
+                <div class="sidebar-card">
+                    <h2><i class="fas fa-code" style="color:#3B82F6; font-size: 1rem;"></i> Technologies</h2>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Debian 12</span>
+                        <span class="tech-tag">Windows 10</span>
+                        <span class="tech-tag">Bash</span>
+                        <span class="tech-tag">DHCP / NAT</span>
+                        <span class="tech-tag">VMWare</span>
+                    </div>
+                </div>
+
+                <div class="sidebar-card">
+                    <h2>Informations</h2>
+                    <div class="info-row">
+                        <span class="info-label">Type</span>
+                        <span class="info-value">TP / Labo</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Auteurs</span>
+                        <span class="info-value">Alan & Ajay</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Année</span>
+                        <span class="info-value">2024</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="info-label">Statut</span>
+                        <span class="info-value status-done">Validé</span>
+                    </div>
+                </div>
+
+                <div class="sidebar-card">
+                    <h2>Ressources</h2>
+                    <p style="font-size: 0.9rem; margin-bottom: 10px;">Consulter la documentation technique complète de ce projet.</p>
+                    <a href="c:\Users\ajaym\Documents\Portfolio BTS SIO\TP Linux Préparation Topologie Routage - Alan et Ajay.pdf" class="cta-btn"><i class="c:\Users\ajaym\Documents\Portfolio BTS SIO\TP Linux Préparation Topologie Routage - Alan et Ajay.pdf"></i> Voir le rapport PDF</a>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="section-block">
+            <h2>Autres Projets</h2>
+            <div class="other-projects-grid">
+                
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-title">Infrastructure Serveur de Jeu</div>
+                        <div class="project-desc">Optimisation JVM, protection DDoS et automatisation de maintenance Linux.</div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-img">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-title">Assistant IA & Automatisation</div>
+                        <div class="project-desc">Scripts d'automatisation et intégration d'IA pour la gestion de tâches.</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+
+
+<!-- Le footer - le bas du site -->
+
+   <footer class="bg-dark text-white py-8">
+<div class="container mx-auto px-6 text-center">
+<p>&copy; Ajay MUTHU KUMAR - Portfolio BTS SIO SISR </p>
+<p class="text-sm opacity-75 mt-2">2025 Tous droits réservés.</p>
+    <div class="social-links">
+    <a href="#" aria-label="LinkedIn"><i data-feather="linkedin"></i></a>
+    <a href="#" aria-label="Email"><i data-feather="mail"></i></a>
+    </div>
+    </div>
+    </footer>
+
+    <script>
+        feather.replace(); // Pour que les icônes fonctionnent
+
+        // Logique pour le menu mobile (Hamburger)
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuButton.addEventListener('click', () => {
+            // Toggle la visibilité du menu mobile
+            mobileMenu.classList.toggle('hidden');
+            
+            // Change l'icône (menu <-> x)
+            const icon = menuButton.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.setAttribute('data-feather', 'menu');
+            } else {
+                icon.setAttribute('data-feather', 'x');
+            }
+            feather.replace(); // Re-render l'icône
+        });
+
+        // Fermer le menu mobile après un clic de lien (pour le scroll)
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                document.querySelector('#menu-button i').setAttribute('data-feather', 'menu');
+                feather.replace();
+            });
+        });
+    </script>
+</body>
+</html>

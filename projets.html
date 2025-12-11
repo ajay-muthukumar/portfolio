@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <link rel="icon" href="https://img.pikbest.com/png-images/20241022/stealth-masked-hacker-gaming-logo-for-gamers_10991543.png!w700wp" type="image/png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio BTS SIO SISR - Ajay MUTHU KUMAR</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="script.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0066CC',
+                        secondary: '#00A651',
+                        accent: '#FF6B35',
+                        dark: '#1A1A2E',
+                        light: '#F8F9FA'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<header class="sticky top-0 z-50 bg-dark/95 backdrop-blur-sm shadow-xl transition-all duration-300">
+    <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="#accueil" class="text-2xl font-bold text-white hover:text-accent transition-colors duration-300">
+            Ajay MUTHU KUMAR <span class="text-primary">SIO SISR</span>
+        </a>
+
+          <div class="hidden md:flex space-x-8 text-lg font-medium">
+            <a href="index.html#accueil" class="text-white hover:text-primary transition-colors duration-200">Accueil</a>
+            <a href="index.html#profil" class="text-white hover:text-primary transition-colors duration-200"> À propos</a>
+            <a href="engie.html" class="text-white hover:text-primary transition-colors duration-200">Entreprise</a>
+            <a href="projets.html" class="text-white hover:text-primary transition-colors duration-200">Projets</a>
+            <a href="epreuves.html" class="text-white hover:text-primary transition-colors duration-200">Épreuves</a>
+            <a href="index.html#competences" class="text-white hover:text-primary transition-colors duration-200">Compétences</a>
+            <a href="index.html#veille" class="text-white hover:text-primary transition-colors duration-200">Veille</a>
+            <a href="contact.html" class="text-accent hover:text-orange-400 transition-colors duration-200">Contact</a>
+        </div>
+
+
+
+        <button id="menu-button" class="md:hidden text-white focus:outline-none">
+            <i data-feather="menu" class="w-8 h-8"></i>
+        </button>
+    </nav>
+
+    <div id="mobile-menu" class="hidden md:hidden bg-dark/90 text-center pb-4">
+            <a href="index.html#accueil" class="block py-2 text-white hover:bg-primary/50 transition-colors duration-200">Accueil</a>
+            <a href="index.html#profil" class="block py-2 text-white hover:bg-primary/50 transition-colors duration-200">À propos</a>
+            <a href="engie.html" class="block py-2 text-white hover:bg-primary/50 transition-colors duration-200">Entreprise</a>
+            <a href="projets.html" class="block py-2 text-white hover:bg-primary/50 transition-colors duration-200">Projets</a>
+            <a href="epreuves.html" class="block py-2 text-white hover:bg-primary/50 transition-colors duration-200">Épreuves</a>
+            <a href="index.html#competences" class="block py-2 text-white hover:bg-primary/50 transition-colors duration-200">Compétences</a>
+            <a href="index.html#veille" class="block py-2 text-white hover:bg-primary/50 transition-colors duration-200">Veille</a>
+            <a href="contact.html" class="block py-2 text-accent hover:bg-accent/50 transition-colors duration-200">Contact</a>
+        </div>
+</header>
+
+    <section id="projets" class="py-20 bg-white">
+        
+        <div style="text-align: center; margin-bottom: 3rem;">
+            <h1 class="gradient-text" style="font-size: 3rem; font-weight: bold; margin-bottom: 1rem;">Mes Projets</h1>
+            <p style="color: #666; font-size: 1.2rem;">Une sélection de travaux réalisés pendant ma formation et mes projets personnels.</p>
+        </div>
+
+        <div class="projects-grid">
+
+            <a href="topologie.html" style="text-decoration: none; color: inherit;">
+  <article class="project-card hover-lift">
+    <div class="card-image-placeholder">
+      <img src="Topologie.png" style="width: 550px; height: 200px;">
+    </div>
+    <div class="card-content">
+      <h3>TP Linux : Topologie Routage</h3>
+      <p>Découverte approfondie des avantages du système Linux, mise en place d'une topologie réseau et configuration du routage sous la distribution Debian.</p>
+      <div class="tech-tags">
+        <span class="tag tag-linux">Linux</span>
+        <span class="tag tag-debian">Debian</span>
+      </div>
+    </div>
+  </article>
+</a>
+
+
+            <article class="project-card hover-lift">
+                <div class="card-image-placeholder">
+                    <i data-feather="layout" style="width: 48px; height: 48px;"></i>
+                </div>
+                <div class="card-content">
+                    <h3>Portfolio Personnel</h3>
+                    <p>Conception et développement de mon tout premier portfolio numérique pour présenter mes compétences et mon parcours professionnel.</p>
+                    <div class="tech-tags">
+                        <span class="tag tag-html">HTML</span>
+                        <span class="tag tag-css">CSS</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card hover-lift">
+                <div class="card-image-placeholder">
+                    <i data-feather="activity" style="width: 48px; height: 48px;"></i>
+                </div>
+                <div class="card-content">
+                    <h3>High Availability & Load Balancing</h3>
+                    <p>Mise en place d'une infrastructure haute disponibilité utilisant HAProxy pour la répartition de charge et Heartbeat pour la redondance sous Debian 12.</p>
+                    <div class="tech-tags">
+                        <span class="tag tag-haproxy">HAProxy</span>
+                        <span class="tag tag-debian">Debian</span>
+                    </div>
+                </div>
+            </article>
+
+            <article class="project-card hover-lift">
+                <div class="card-image-placeholder">
+                    <i data-feather="monitor" style="width: 48px; height: 48px;"></i>
+                </div>
+                <div class="card-content">
+                    <h3>Gestion de Parc GLPI</h3>
+                    <p>Installation, configuration et déploiement de GLPI, une solution Open Source complète pour la gestion de parc informatique et le Helpdesk.</p>
+                    <div class="tech-tags">
+                        <span class="tag tag-glpi">GLPI</span>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+        <div style="text-align: center;">
+            <a href="index.html" class="btn-primary">Retour à l'accueil</a>
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+    
+    
+
+ <!-- Le footer - le bas du site -->
+
+   <footer class="bg-dark text-white py-8">
+<div class="container mx-auto px-6 text-center">
+<p>&copy; Ajay MUTHU KUMAR - Portfolio BTS SIO SISR </p>
+<p class="text-sm opacity-75 mt-2">2025 Tous droits réservés.</p>
+    <div class="social-links">
+    <a href="#" aria-label="LinkedIn"><i data-feather="linkedin"></i></a>
+    <a href="#" aria-label="Email"><i data-feather="mail"></i></a>
+    </div>
+    </div>
+    </footer>
+
+    <script>
+        feather.replace(); // Pour que les icônes fonctionnent
+
+        // Logique pour le menu mobile (Hamburger)
+        const menuButton = document.getElementById('menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuButton.addEventListener('click', () => {
+            // Toggle la visibilité du menu mobile
+            mobileMenu.classList.toggle('hidden');
+            
+            // Change l'icône (menu <-> x)
+            const icon = menuButton.querySelector('i');
+            if (mobileMenu.classList.contains('hidden')) {
+                icon.setAttribute('data-feather', 'menu');
+            } else {
+                icon.setAttribute('data-feather', 'x');
+            }
+            feather.replace(); // Re-render l'icône
+        });
+
+        // Fermer le menu mobile après un clic de lien (pour le scroll)
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                document.querySelector('#menu-button i').setAttribute('data-feather', 'menu');
+                feather.replace();
+            });
+        });
+    </script>
+</body>
+</html>
