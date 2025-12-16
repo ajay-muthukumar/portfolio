@@ -62,7 +62,116 @@
         </div>
 </header>
 
+<style>
+    .dropdown {
+        position: relative; 
+        display: inline-block;
+        /* Le positionnement absolu est géré par Tailwind sur l'élément HTML */
+    }
 
+    .dropdown-button {
+        background-color: #007bff; /* Bleu standard */
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        cursor: pointer;
+        border-radius: 4px;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        transition: background-color 0.3s;
+    }
+    
+    /* Correction : Ajout de right: 0 pour que le menu s'ouvre vers la gauche */
+    .dropdown-menu {
+        display: none; /* LA CLÉ : MASQUÉ PAR DÉFAUT */
+        position: absolute; 
+        top: 100%; 
+        right: 0; /* Alignement à droite du bouton parent */
+        left: auto; /* Important pour désactiver left: 0 */
+        z-index: 100; 
+        background-color: white; 
+        min-width: 300px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        border: 1px solid #ddd;
+        border-top: none; 
+        padding: 0;
+        list-style-type: none; 
+        margin: 0;
+        border-radius: 0 0 4px 4px; 
+    }
+
+    .dropdown:hover .dropdown-menu {
+        display: block; /* AFFICHÉ AU SURVOL */
+    }
+
+    .dropdown-menu li a {
+        color: #333;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        white-space: nowrap; 
+    }
+
+    .dropdown-menu li a:hover {
+        background-color: #f5f5f5; 
+    }
+
+    .dropdown-menu li a .icon {
+        margin-right: 10px;
+        color: #999;
+    }
+
+
+    /* =======================================================
+       C. STYLES DE LA CARTE DE PROJET
+       ======================================================= */
+    .project-card {
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        overflow: hidden; 
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hover-lift:hover {
+        transform: translateY(-5px); 
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-image-placeholder {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .card-image-placeholder img {
+        width: 100%; 
+        height: 100%; 
+        object-fit: cover; 
+    }
+
+    /* Tags de technologie */
+    .tech-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .tech-tags .tag {
+        font-size: 0.8rem;
+        padding: 4px 8px;
+        border-radius: 4px;
+        color: white;
+        font-weight: 600;
+    }
+
+    /* Couleurs spécifiques aux tags */
+    .tag-cisco { background-color: #00A651; } /* secondary */
+    .tag-VTP { background-color: #FF6B35; } /* accent */
+    .tag-VLSM { background-color: #0066CC; } /* primary */
+    .tag-Routage { background-color: #1A1A2E; } /* dark */
+</style>
 
   <!-- ENGIE Section -->
     <section id="engie" class="py-20 bg-white">
@@ -82,32 +191,116 @@
              Actuellement, notre équipe de support se compose de huit personnes, moi inclus, ce qui nous permet d'assurer une couverture efficace et réactive face aux demandes internes. 
              Cette collaboration au sein d’une équipe dynamique m’a permis de renforcer mes compétences techniques tout en développant un réel sens du service.</p>
         <br>    
-             <div class="max-w-4xl mx-auto">
-                <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 shadow-2xl">
-                    <div class="flex flex-col md:flex-row items-center gap-8">
-                        <div class="flex-1">
-                            <h3 class="text-2xl font-semibold mb-4">IDENTITÉ DE L'ENTREPRISE</h3>
-    <p><strong>Nom :</strong> ENGIE Home Services (anciennement Savelys)</p>
-    <p><strong>Statut juridique :</strong>  SASU (Société par Actions Simplifiée à Associé Unique)</p>
-    <p><strong>Siège social :</strong> 1 place Samuel de Champlain, 92400 Courbevoie, France</p>
-    <p><strong>Société mère :</strong> ENGIE</p>
-    <p><strong>Chiffres d'affaires :</strong> 587 millions d'euros en 2021</p>
-    <p><strong>Direction :</strong> Jean-Luc Vandenbrouck, Président-Directeur Général</p>
-    <p><strong>Activités principales :</strong> "Entretien et maintenance", "Dépannage", "Installation et mise en service", "Remplacement et rénonvation énergétique" et "Mobilité verte"</p>
-    <p><strong>Effectif de l’entreprise :</strong> environ 5 000 collaborateurs</p>
-    <br>
-    <div class="bas">
-      <div class="carte">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2623.0390002979057!2d2.237086175061975!3d48.89559389808951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e665ddcf9337e9%3A0x7034dd43df8a3c24!2sENGIE%20Tour%20T1!5e0!3m2!1sfr!2sfr!4v1746998635870!5m2!1sfr!2sfr" width="825" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </div>
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-light/80 rounded-2xl p-8 shadow-xl mb-10">
+                    <h3 class="text-2xl font-semibold mb-4 text-primary">IDENTITÉ DE L'ENTREPRISE</h3>
+                    <p><strong>Nom :</strong> ENGIE Home Services (anciennement Savelys)</p>
+                    <p><strong>Statut juridique :</strong> SASU (Société par Actions Simplifiée à Associé Unique)</p>
+                    <p><strong>Siège social :</strong> 1 place Samuel de Champlain, 92400 Courbevoie, France</p>
+                    <p><strong>Société mère :</strong> ENGIE</p>
+                    <p><strong>Chiffres d'affaires :</strong> 587 millions d'euros en 2021</p>
+                    <p><strong>Direction :</strong> Jean-Luc Vandenbrouck, Président-Directeur Général</p>
+                    <p><strong>Activités principales :</strong> "Entretien et maintenance", "Dépannage", "Installation et mise en service", "Remplacement et rénovation énergétique" et "Mobilité verte"</p>
+                    <p><strong>Effectif de l’entreprise :</strong> environ 5 000 collaborateurs</p>
+                </div>
+                
+                <div class="bg-white/10 rounded-2xl shadow-xl overflow-hidden">
+                    <h3 class="text-2xl font-semibold p-4 text-dark/70">Localisation</h3>
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2623.0390002979057!2d2.237086175061975!3d48.89559389808951!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e665ddcf9337e9%3A0x7034dd43df8a3c24!2sENGIE%20Tour%20T1!5e0!3m2!1sfr!2sfr!4v1746998635870!5m2!1sfr!2sfr" 
+                        width="100%" 
+                        height="450" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+    
+            </div>
+        </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
+
+
+                <br>
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold text-primary inline-block">Projets Professionnel</h2>
+                </div>
+                <div class="flex flex-wrap justify-center gap-8 px-6"> 
+                
+                    <article class="project-card hover-lift max-w-sm w-full relative">
+                        <div class="dropdown card-dropdown absolute top-0 right-0 p-4 z-10">
+                            <button class="dropdown-button">Documents</button>
+                            <ul class="dropdown-menu"> 
+                                <li><a href="PROC ACCES TECHNICIEN.pdf"><span class="icon">📄</span> Procédure creation compte technicien </a></li>
+                                <li><a href="PROC ACCES DIRECTEUR AGENCE.pdf"icon>📄</span> Procédure creation compte Directeur d'agence </a></li>
+                                <li><a href="PROC ACCES CONSEILLER AGENCE.pdf"><span class="icon">📄</span> Procédure creation compte Conseiller </a></li>
+                            </ul>
+                        </div>
+                
+                        <div class="card-image-placeholder h-40">
+                            <img src="Utilisateur logo.jpg" alt="Utilisateur Logo">
+                        </div>
+                        <div class="card-content p-4">
+                            <h3 class="text-xl font-semibold text-dark mb-2">Creation d'accès d'utilisateur</h3>
+                            <p class="text-gray-600 text-base mb-3">Cette procédure vise à garantir que le nouvel utilisateur chez Engie Home Services "Technicien, Directeur d'agence, Conseiller, Consultant..." dispose de tous les accès et licences nécessaires sur les différents outils de l'entreprise.</p>
+                            <div class="tech-tags">
+                                <span class="tag tag-cisco">Windows</span>
+                                <span class="tag tag-VTP">Active Directory</span>
+                                <span class="tag tag-VLSM">PEO</span>
+                                <span class="tag tag-Routage">Microsoft 365</span>
+                            </div>
+                        </div>
+                    </article>
+                
+                    <article class="project-card hover-lift max-w-sm w-full relative">
+                       <a href="EHS - CYBER25 - SCÉNARIO 1_1080p.mp4">
+                        <div class="card-image-placeholder h-40">
+                            <img src="Image de la video Cyber.png" alt="Utilisateur Logo">
+                        </div>
+                        <div class="card-content p-4">
+                            <h3 class="text-xl font-semibold text-dark mb-2">Stockages externes, attention aux risques !</h3>
+                            <p class="text-gray-600 text-base mb-3">Les supports amovibles (clés USB, disques durs) sont des vecteurs de menaces. Il est essentiel de ne jamais les laisser sans surveillance et de ne jamais brancher une clé de provenance inconnue. Pour les échanges sensibles, privilégiez le cloud sécurisé. Cette video peut le prouver !</p>
+                            <div class="tech-tags">
+                                <span class="tag tag-cisco">Clé USB</span>
+                                <span class="tag tag-VTP">Cybersécurité</span>
+                                <span class="tag tag-VLSM">Support Informatique</span>
+                            </div>
+                        </div>
+                    </a>
+                    </article>
+
+                    <article class="project-card hover-lift max-w-sm w-full relative">
+                        <div class="dropdown card-dropdown absolute top-0 right-0 p-4 z-10">
+                            <button class="dropdown-button">Documents</button>
+                            <ul class="dropdown-menu"> 
+                                <li><a href="Procédure Commande Tablette 8 Pouces.pdf"><span class="icon">📄</span> Procédure commande de tablette 8 Pouces </a></li>
+                                <li><a href="Procédure Commande Tablette 10 Pouces.pdf"icon>📄</span> Procédure commande de tablette 10 Pouces </a></li>
+                            </ul>
+                        </div>
+                
+                        <div class="card-image-placeholder h-40">
+                            <img src="tablette.webp" alt="tablette Logo">
+                        </div>
+                        <div class="card-content p-4">
+                            <h3 class="text-xl font-semibold text-dark mb-2">Projet NUM - Tablette</h3>
+                            <p class="text-gray-600 text-base mb-3">Ce projet consiste à commander des tablettes destinées aux techniciens et aux chefs d'agence de chaque gamme. S'ils cessent de les utiliser (ou si les besoins évoluent), ces équipements seront restitués.</p>
+                            <div class="tech-tags">
+                                <span class="tag tag-cisco">Samsung</span>
+                                <span class="tag tag-VTP">Power BI</span>
+                                <span class="tag tag-VLSM">JIRA</span>
+                                <span class="tag tag-Routage">UserCube</span>
+                            </div>
+                        </div>
+                    </article>
+            
+</div>
+</div>
+</section>
 
 <!-- Le footer - le bas du site -->
 
